@@ -297,8 +297,8 @@ class Sphere extends SphereSprite {
     }
 
     push(x, y) {
-        this.acceleration.x += x;
-        this.acceleration.y += y;
+        this.acceleration.x += x * this.mass;
+        this.acceleration.y += y * this.mass;
     }
 
     calcPhysic() {
